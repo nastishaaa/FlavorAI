@@ -6,7 +6,7 @@ const recipesRouter = Router();
 
 recipesRouter.get('/', getAllRecipesController);
 recipesRouter.get('/:id', getRecipeByIdController);
-recipesRouter.get('/author/:authorId', authenticate, getRecipeByAuthorController);
+recipesRouter.get('/:authorId', authenticate, getRecipeByAuthorController);
 recipesRouter.post('/create', authenticate, createRecipeController);
 
 export default recipesRouter;
